@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" action="/add">
+    <textarea name="content" placeholder="Apni love shayari likho..." required></textarea>
+    <button type="submit">Shayari Add Karo</button>
+</form>
+
+<div class="shayari-list">
+    {% for s in shayaris %}
+        <div class="shayari-box">{{ s[1] }}</div>
+    {% endfor %}
+</div>
+{% endblock %}
